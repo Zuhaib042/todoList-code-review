@@ -2,7 +2,9 @@ import './style.css';
 import TaskStatus from './modules/taskStatus.js';
 import tasks, { inputAdd, listContainer } from './modules/list.js';
 
-window.onload = tasks.displayList();
+document.addEventListener('DOMContentLoaded', () => {
+  tasks.displayList();
+});
 TaskStatus.taskComplete();
 TaskStatus.clearList();
 inputAdd.addEventListener('keypress', (event) => {
